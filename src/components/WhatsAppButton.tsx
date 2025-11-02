@@ -7,7 +7,7 @@ const WhatsAppButton = () => {
       href="https://wa.me/79010370963"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 group"
+      className="fixed bottom-24 right-6 z-50 group"
     >
       <Button
         size="lg"
