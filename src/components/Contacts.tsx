@@ -39,7 +39,7 @@ const Contacts = () => {
     {
       icon: 'MapPin',
       title: 'Адрес',
-      value: 'г. Москва, ул. Логистическая, 1',
+      value: 'г. Иваново',
       description: 'Главный офис и склад'
     },
     {
