@@ -33,9 +33,26 @@ const Hero = () => {
                 <Icon name="Calculator" className="mr-2 h-5 w-5" />
                 Рассчитать стоимость
               </Button>
-              <Button size="lg" variant="outline" className="text-base px-10 py-7 border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all">
-                <Icon name="Phone" className="mr-2 h-5 w-5" />
-                +7 (901) 037-09-63
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-base px-10 py-7 border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all"
+                asChild
+              >
+                <a href="tel:+79010370963">
+                  <Icon name="Phone" className="mr-2 h-5 w-5" />
+                  +7 (901) 037-09-63
+                </a>
+              </Button>
+              <Button 
+                size="lg" 
+                className="text-base px-10 py-7 bg-[#25D366] hover:bg-[#128C7E] text-white border-0 shadow-md hover:shadow-lg transition-all"
+                asChild
+              >
+                <a href="https://wa.me/79010370963" target="_blank" rel="noopener noreferrer">
+                  <Icon name="MessageCircle" className="mr-2 h-5 w-5" />
+                  WhatsApp
+                </a>
               </Button>
             </div>
 
