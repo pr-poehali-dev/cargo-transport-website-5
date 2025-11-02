@@ -10,6 +10,7 @@ import Contacts from '@/components/Contacts';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import ScrollToTop from '@/components/ScrollToTop';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -54,6 +55,7 @@ const Index = () => {
       
       <Footer />
       <WhatsAppButton />
+      <ScrollToTop />
     </div>
   );
 };
