@@ -78,6 +78,14 @@ const Footer = () => {
             </a>
           </div>
         </div>
+
+        <div className="border-t border-white/10 pt-8 mt-8 flex justify-center">
+          <img 
+            src="https://cdn.poehali.dev/files/756a1bfc-d221-4430-a160-c6e522fbc424.png" 
+            alt="Карго Фьюжен" 
+            className="h-16 w-auto brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+          />
+        </div>
       </div>
     </footer>
   );
