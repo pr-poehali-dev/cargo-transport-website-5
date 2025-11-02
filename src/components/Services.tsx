@@ -10,6 +10,12 @@ const Services = () => {
       features: ['Полная страховка', 'Отслеживание в реальном времени', 'Любые габариты']
     },
     {
+      icon: 'Package',
+      title: 'Сборные грузы',
+      description: 'Экономичная доставка небольших партий товаров по всей России',
+      features: ['Выгодные тарифы', 'Консолидация грузов', 'Регулярные рейсы']
+    },
+    {
       icon: 'Shield',
       title: 'Страхование грузов',
       description: 'Полная защита вашего груза на всех этапах перевозки',
@@ -44,7 +50,7 @@ const Services = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <Card 
             key={index} 
