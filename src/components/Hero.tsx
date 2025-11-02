@@ -62,17 +62,17 @@ const Hero = () => {
               </Button>
             </div>
 
-            <div className="grid grid-cols-3 gap-4 pt-8 border-t border-gray-200">
+            <div className="grid grid-cols-3 gap-4 pt-8 border-t-2 border-accent/20">
               {[
                 { icon: 'Shield', label: 'Полное страхование' },
                 { icon: 'Clock', label: 'Доставка точно в срок' },
                 { icon: 'FileCheck', label: 'Все документы' }
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Icon name={item.icon} className="h-4 w-4 text-accent" />
+                  <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0 border-2 border-accent/30">
+                    <Icon name={item.icon} className="h-5 w-5 text-accent" />
                   </div>
-                  <span className="text-sm text-gray-600 font-medium">{item.label}</span>
+                  <span className="text-sm text-gray-800 font-bold">{item.label}</span>
                 </div>
               ))}
             </div>
