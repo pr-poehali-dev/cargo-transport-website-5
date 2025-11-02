@@ -29,9 +29,15 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button size="lg" className="text-base px-10 py-7 shadow-md hover:shadow-lg transition-all">
-                <Icon name="Calculator" className="mr-2 h-5 w-5" />
-                Рассчитать стоимость
+              <Button 
+                size="lg" 
+                className="text-base px-10 py-7 shadow-md hover:shadow-lg transition-all"
+                asChild
+              >
+                <a href="https://wa.me/79010370963?text=Здравствуйте!%20Хочу%20рассчитать%20стоимость%20доставки%20груза" target="_blank" rel="noopener noreferrer">
+                  <Icon name="Calculator" className="mr-2 h-5 w-5" />
+                  Рассчитать стоимость
+                </a>
               </Button>
               <Button 
                 size="lg" 
