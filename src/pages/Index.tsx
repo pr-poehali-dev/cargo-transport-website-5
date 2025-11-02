@@ -5,6 +5,7 @@ import About from '@/components/About';
 import Portfolio from '@/components/Portfolio';
 import Testimonials from '@/components/Testimonials';
 import RouteMap from '@/components/RouteMap';
+import FAQ from '@/components/FAQ';
 import Contacts from '@/components/Contacts';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -40,6 +41,10 @@ const Index = () => {
         
         <section id="map" className="py-20 bg-muted/30">
           <RouteMap />
+        </section>
+        
+        <section id="faq" className="py-20">
+          <FAQ />
         </section>
         
         <section id="contacts" className="py-20 bg-muted/30">
