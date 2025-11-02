@@ -50,13 +50,6 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
             </Button>
             <Button 
               variant="ghost" 
-              onClick={() => scrollToSection('track')}
-              className={`font-medium ${activeSection === 'track' ? 'text-accent' : 'text-gray-700'}`}
-            >
-              Отследить груз
-            </Button>
-            <Button 
-              variant="ghost" 
               onClick={() => scrollToSection('contacts')}
               className={`font-medium ${activeSection === 'contacts' ? 'text-accent' : 'text-gray-700'}`}
             >
