@@ -5,6 +5,16 @@ const Hero = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-white">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-white to-white" />
+      
+      <div 
+        className="absolute inset-0 opacity-[0.03]" 
+        style={{
+          backgroundImage: 'url(https://cdn.poehali.dev/files/756a1bfc-d221-4430-a160-c6e522fbc424.png)',
+          backgroundSize: '800px auto',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
@@ -51,28 +61,26 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl border-2 border-gray-200 p-12 shadow-xl">
-              <img 
-                src="https://cdn.poehali.dev/files/756a1bfc-d221-4430-a160-c6e522fbc424.png" 
-                alt="Карго Фьюжен" 
-                className="w-full"
-              />
-            </div>
-
-            <div className="absolute -bottom-6 -left-6 right-6 bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
-              <div className="grid grid-cols-3 gap-6">
-                {[
-                  { number: '15+', label: 'Лет опыта' },
-                  { number: '500+', label: 'Единиц техники' },
-                  { number: '50+', label: 'Городов РФ' }
-                ].map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-1">{stat.number}</div>
-                    <div className="text-xs text-gray-500 uppercase tracking-wide">{stat.label}</div>
+          <div className="relative lg:block hidden">
+            <div className="grid grid-cols-1 gap-6">
+              {[
+                { number: '15+', label: 'Лет опыта', icon: 'Award' },
+                { number: '500+', label: 'Единиц техники', icon: 'Truck' },
+                { number: '50+', label: 'Городов РФ', icon: 'MapPin' },
+                { number: '24/7', label: 'Поддержка', icon: 'Headphones' }
+              ].map((stat, index) => (
+                <div key={index} className="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-200 hover:border-accent/40 transition-all">
+                  <div className="flex items-center gap-6">
+                    <div className="w-16 h-16 bg-primary/5 rounded-xl flex items-center justify-center flex-shrink-0 border border-primary/10">
+                      <Icon name={stat.icon} className="h-8 w-8 text-primary" />
+                    </div>
+                    <div>
+                      <div className="text-4xl font-bold text-primary mb-1">{stat.number}</div>
+                      <div className="text-sm text-gray-500 uppercase tracking-wide">{stat.label}</div>
+                    </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
