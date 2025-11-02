@@ -45,11 +45,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Icon name="Mail" className="h-4 w-4 text-secondary" />
-                info@cargofusion.ru
+                koroleva26.07@mail.ru
               </li>
               <li className="flex items-center gap-2">
                 <Icon name="MapPin" className="h-4 w-4 text-secondary" />
-                Москва, ул. Логистическая, 1
+                г. Иваново
               </li>
             </ul>
           </div>
@@ -60,17 +60,16 @@ const Footer = () => {
             © 2025 Карго Фьюжен. Все права защищены.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="text-white/60 hover:text-secondary transition-colors">
-              <Icon name="Facebook" className="h-5 w-5" />
+            <a href="https://vk.com/kargoks" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-secondary transition-colors" title="ВКонтакте">
+              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.38 14.14h-1.39c-.56 0-.73-.45-1.73-1.47-.87-.87-1.26-.98-1.48-.98-.3 0-.39.09-.39.5v1.34c0 .36-.12.58-1.06.58-1.55 0-3.27-.94-4.48-2.69-1.81-2.58-2.3-4.52-2.3-4.91 0-.22.09-.43.5-.43h1.39c.38 0 .52.17.67.58.75 2.2 2.01 4.13 2.52 4.13.2 0 .28-.09.28-.6v-2.33c-.06-1.11-.65-1.2-.65-1.6 0-.17.14-.35.37-.35h2.17c.31 0 .43.17.43.54v3.14c0 .31.14.43.23.43.2 0 .36-.12.73-.49 1.12-1.26 1.93-3.2 1.93-3.2.1-.22.28-.43.66-.43h1.39c.42 0 .51.21.42.54-.15.75-1.8 3.09-1.8 3.09-.17.28-.23.41 0 .72.17.23.73.72 1.11 1.15.68.77 1.21 1.41 1.35 1.86.14.44-.08.67-.5.67z"/>
+              </svg>
             </a>
-            <a href="#" className="text-white/60 hover:text-secondary transition-colors">
-              <Icon name="Twitter" className="h-5 w-5" />
+            <a href="https://wa.me/79010370963" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-secondary transition-colors" title="WhatsApp">
+              <Icon name="MessageCircle" className="h-5 w-5" />
             </a>
-            <a href="#" className="text-white/60 hover:text-secondary transition-colors">
-              <Icon name="Instagram" className="h-5 w-5" />
-            </a>
-            <a href="#" className="text-white/60 hover:text-secondary transition-colors">
-              <Icon name="Linkedin" className="h-5 w-5" />
+            <a href="tel:+79010370963" className="text-white/60 hover:text-secondary transition-colors" title="Позвонить">
+              <Icon name="Phone" className="h-5 w-5" />
             </a>
           </div>
         </div>
