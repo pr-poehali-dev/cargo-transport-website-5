@@ -7,6 +7,7 @@ import RouteMap from '@/components/RouteMap';
 import Contacts from '@/components/Contacts';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -42,6 +43,7 @@ const Index = () => {
       </main>
       
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
