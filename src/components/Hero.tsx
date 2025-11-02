@@ -82,31 +82,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative lg:block hidden animate-in fade-in slide-in-from-right-8 duration-1000 delay-500">
-            <div className="grid grid-cols-1 gap-6">
-              {[
-                { number: '50+', label: 'Городов РФ', icon: 'MapPin' },
-                { number: '24/7', label: 'Поддержка', icon: 'Headphones' },
-                { number: '100%', label: 'Гарантия', icon: 'Award' }
-              ].map((stat, index) => (
-                <div 
-                  key={index} 
-                  className="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-200 hover:border-accent/40 transition-all animate-in fade-in slide-in-from-right-4 duration-700"
-                  style={{ animationDelay: `${700 + index * 100}ms`, animationFillMode: 'both' }}
-                >
-                  <div className="flex items-center gap-6">
-                    <div className="w-16 h-16 bg-primary/5 rounded-xl flex items-center justify-center flex-shrink-0 border border-primary/10">
-                      <Icon name={stat.icon} className="h-8 w-8 text-primary" />
-                    </div>
-                    <div>
-                      <div className="text-4xl font-bold text-primary mb-1">{stat.number}</div>
-                      <div className="text-sm text-gray-500 uppercase tracking-wide">{stat.label}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+
         </div>
 
         <div className="mt-32 grid md:grid-cols-4 gap-8 max-w-7xl mx-auto">
