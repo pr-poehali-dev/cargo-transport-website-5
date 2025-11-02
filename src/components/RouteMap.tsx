@@ -3,35 +3,51 @@ import Icon from '@/components/ui/icon';
 
 const RouteMap = () => {
   const cities = [
-    { name: 'Москва', x: 55, y: 30, isHub: true },
-    { name: 'Санкт-Петербург', x: 50, y: 15, isHub: true },
-    { name: 'Новосибирск', x: 85, y: 35, isHub: true },
-    { name: 'Екатеринбург', x: 70, y: 28, isHub: true },
-    { name: 'Казань', x: 62, y: 32, isHub: false },
-    { name: 'Нижний Новгород', x: 58, y: 33, isHub: false },
-    { name: 'Самара', x: 65, y: 40, isHub: false },
-    { name: 'Челябинск', x: 73, y: 38, isHub: false },
-    { name: 'Омск', x: 78, y: 36, isHub: false },
-    { name: 'Красноярск', x: 90, y: 33, isHub: false }
+    { name: 'Москва', x: 48, y: 35, isHub: true },
+    { name: 'Санкт-Петербург', x: 46, y: 20, isHub: true },
+    { name: 'Минск', x: 42, y: 32, isHub: true, country: 'BY' },
+    { name: 'Казань', x: 58, y: 36, isHub: false },
+    { name: 'Екатеринбург', x: 68, y: 34, isHub: true },
+    { name: 'Новосибирск', x: 84, y: 37, isHub: true },
+    { name: 'Астана', x: 76, y: 44, isHub: true, country: 'KZ' },
+    { name: 'Алматы', x: 80, y: 52, isHub: true, country: 'KZ' },
+    { name: 'Владивосток', x: 96, y: 48, isHub: false },
+    { name: 'Иркутск', x: 90, y: 40, isHub: false },
+    { name: 'Красноярск', x: 88, y: 36, isHub: false },
+    { name: 'Омск', x: 76, y: 38, isHub: false },
+    { name: 'Челябинск', x: 70, y: 40, isHub: false },
+    { name: 'Самара', x: 60, y: 42, isHub: false },
+    { name: 'Ростов-на-Дону', x: 52, y: 48, isHub: false },
+    { name: 'Краснодар', x: 50, y: 50, isHub: false },
+    { name: 'Волгоград', x: 56, y: 46, isHub: false },
+    { name: 'Нижний Новгород', x: 54, y: 36, isHub: false }
   ];
 
   const routes = [
     { from: 'Москва', to: 'Санкт-Петербург' },
+    { from: 'Москва', to: 'Минск' },
     { from: 'Москва', to: 'Казань' },
     { from: 'Москва', to: 'Нижний Новгород' },
+    { from: 'Москва', to: 'Ростов-на-Дону' },
     { from: 'Казань', to: 'Екатеринбург' },
     { from: 'Екатеринбург', to: 'Челябинск' },
-    { from: 'Челябинск', to: 'Омск' },
+    { from: 'Екатеринбург', to: 'Омск' },
+    { from: 'Челябинск', to: 'Астана' },
     { from: 'Омск', to: 'Новосибирск' },
     { from: 'Новосибирск', to: 'Красноярск' },
-    { from: 'Нижний Новгород', to: 'Самара' }
+    { from: 'Красноярск', to: 'Иркутск' },
+    { from: 'Иркутск', to: 'Владивосток' },
+    { from: 'Астана', to: 'Алматы' },
+    { from: 'Нижний Новгород', to: 'Самара' },
+    { from: 'Самара', to: 'Волгоград' },
+    { from: 'Ростов-на-Дону', to: 'Краснодар' }
   ];
 
   const stats = [
-    { icon: 'MapPin', value: '50+', label: 'Городов покрытия' },
-    { icon: 'Route', value: '120+', label: 'Активных маршрутов' },
-    { icon: 'Truck', value: '500+', label: 'Транспортных единиц' },
-    { icon: 'Clock', value: '24/7', label: 'Работа без выходных' }
+    { icon: 'MapPin', value: 'Россия, Казахстан, Беларусь', label: 'География доставки' },
+    { icon: 'Route', value: 'Все регионы', label: 'Активных маршрутов' },
+    { icon: 'Truck', value: 'Современный', label: 'Автопарк' },
+    { icon: 'Clock', value: 'Круглосуточно', label: 'Работа без выходных' }
   ];
 
   return (
@@ -106,7 +122,7 @@ const RouteMap = () => {
                       <text
                         x={city.x}
                         y={city.y - 3}
-                        fontSize="2.5"
+                        fontSize="2"
                         fill="hsl(var(--foreground))"
                         textAnchor="middle"
                         fontWeight={city.isHub ? "700" : "500"}
@@ -118,7 +134,7 @@ const RouteMap = () => {
                 </svg>
 
                 <div className="absolute bottom-4 left-4 bg-background/95 backdrop-blur-sm rounded-lg p-3 border">
-                  <div className="flex items-center gap-4 text-sm">
+                  <div className="flex flex-wrap items-center gap-4 text-sm">
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 rounded-full bg-secondary" />
                       <span>Логистические хабы</span>
@@ -127,6 +143,12 @@ const RouteMap = () => {
                       <div className="w-2 h-2 rounded-full bg-primary" />
                       <span>Города доставки</span>
                     </div>
+                  </div>
+                </div>
+                
+                <div className="absolute top-4 right-4 bg-background/95 backdrop-blur-sm rounded-lg p-3 border">
+                  <div className="text-sm font-semibold text-primary">
+                    🇷🇺 Россия • 🇰🇿 Казахстан • 🇧🇾 Беларусь
                   </div>
                 </div>
               </div>
