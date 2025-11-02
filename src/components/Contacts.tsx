@@ -28,13 +28,15 @@ const Contacts = () => {
       icon: 'Phone',
       title: 'Телефон',
       value: '+7 (901) 037-09-63',
-      description: 'Звоните с 9:00 до 21:00'
+      description: 'Звоните с 9:00 до 21:00',
+      link: 'tel:+79010370963'
     },
     {
       icon: 'Mail',
       title: 'Email',
       value: 'koroleva26.07@mail.ru',
-      description: 'Ответим в течение часа'
+      description: 'Ответим в течение часа',
+      link: 'mailto:koroleva26.07@mail.ru'
     },
     {
       icon: 'MapPin',
@@ -127,16 +129,29 @@ const Contacts = () => {
           {contactInfo.map((contact, index) => (
             <Card key={index} className="border-2 hover:border-secondary transition-all">
               <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon name={contact.icon} className="h-6 w-6 text-secondary" />
+                {contact.link ? (
+                  <a href={contact.link} className="flex items-start gap-4 group">
+                    <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-secondary/20 transition-colors">
+                      <Icon name={contact.icon} className="h-6 w-6 text-secondary" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-sm text-muted-foreground mb-1">{contact.title}</div>
+                      <div className="text-lg font-semibold mb-1 group-hover:text-secondary transition-colors">{contact.value}</div>
+                      <div className="text-sm text-muted-foreground">{contact.description}</div>
+                    </div>
+                  </a>
+                ) : (
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Icon name={contact.icon} className="h-6 w-6 text-secondary" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-sm text-muted-foreground mb-1">{contact.title}</div>
+                      <div className="text-lg font-semibold mb-1">{contact.value}</div>
+                      <div className="text-sm text-muted-foreground">{contact.description}</div>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <div className="text-sm text-muted-foreground mb-1">{contact.title}</div>
-                    <div className="text-lg font-semibold mb-1">{contact.value}</div>
-                    <div className="text-sm text-muted-foreground">{contact.description}</div>
-                  </div>
-                </div>
+                )}
               </CardContent>
             </Card>
           ))}
