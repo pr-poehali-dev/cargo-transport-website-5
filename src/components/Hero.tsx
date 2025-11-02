@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-white to-white" />
       
       <div 
-        className="absolute inset-0 opacity-[0.25]" 
+        className="absolute inset-0 opacity-[0.35]" 
         style={{
           backgroundImage: 'url(https://cdn.poehali.dev/files/756a1bfc-d221-4430-a160-c6e522fbc424.png)',
           backgroundSize: 'cover',
