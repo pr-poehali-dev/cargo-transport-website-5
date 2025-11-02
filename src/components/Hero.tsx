@@ -9,10 +9,11 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           <div className="text-left">
-            <div className="inline-flex items-center gap-2 bg-primary/5 px-5 py-2.5 rounded-md mb-8 border border-primary/10">
-              <Icon name="Award" className="h-4 w-4 text-primary" />
-              <span className="text-sm font-semibold text-primary tracking-wide uppercase">С 2010 года на рынке</span>
-            </div>
+            <img 
+              src="https://cdn.poehali.dev/files/756a1bfc-d221-4430-a160-c6e522fbc424.png" 
+              alt="Карго Фьюжен" 
+              className="h-20 w-auto mb-8"
+            />
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-primary">
               Надёжные грузоперевозки по России
