@@ -23,7 +23,7 @@ const Hero = () => {
               Надёжные грузоперевозки по России
             </h1>
 
-            <p className="text-xl md:text-2xl mb-8 text-gray-600 leading-relaxed max-w-xl font-light">
+            <p className="text-xl md:text-2xl mb-8 text-gray-600 leading-relaxed max-w-xl font-semibold">
               Профессиональные логистические решения для вашего бизнеса. 
               Гарантируем сохранность грузов и соблюдение сроков доставки.
             </p>
