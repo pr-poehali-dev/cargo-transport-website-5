@@ -5,14 +5,14 @@ const OnlineCounter = () => {
   const [onlineCount, setOnlineCount] = useState(0);
 
   useEffect(() => {
-    const getRandomCount = () => Math.floor(Math.random() * 15) + 8;
+    const getRandomCount = () => Math.floor(Math.random() * 8) + 3;
     setOnlineCount(getRandomCount());
 
     const interval = setInterval(() => {
       setOnlineCount(prev => {
         const change = Math.random() > 0.5 ? 1 : -1;
         const newCount = prev + change;
-        return Math.max(5, Math.min(25, newCount));
+        return Math.max(3, Math.min(10, newCount));
       });
     }, 15000);
 
