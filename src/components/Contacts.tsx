@@ -33,7 +33,7 @@ const Contacts = () => {
     {
       icon: 'Mail',
       title: 'Email',
-      value: 'info@cargofusion.ru',
+      value: 'koroleva26.07@mail.ru',
       description: 'Ответим в течение часа'
     },
     {
