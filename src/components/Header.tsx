@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
+import CallbackModal from '@/components/CallbackModal';
 
 interface HeaderProps {
   activeSection: string;
@@ -63,10 +64,7 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
             </Button>
           </nav>
 
-          <Button className="hidden md:flex" onClick={() => scrollToSection('contacts')}>
-            <Icon name="Phone" className="mr-2 h-4 w-4" />
-            Связаться
-          </Button>
+          <CallbackModal />
 
           <Button variant="ghost" className="md:hidden">
             <Icon name="Menu" className="h-6 w-6" />
