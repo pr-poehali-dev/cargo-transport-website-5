@@ -26,7 +26,8 @@ const About = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 relative">
+      <div className="absolute inset-0 bg-gradient-to-tr from-secondary/10 via-primary/5 to-transparent rounded-3xl -z-10"></div>
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <div className="inline-flex items-center gap-2 bg-primary/5 px-5 py-2.5 rounded-md mb-6 border border-primary/10">

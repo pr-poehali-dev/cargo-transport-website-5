@@ -42,7 +42,8 @@ const Services = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 rounded-3xl -z-10"></div>
       <div className="text-center mb-16">
         <div className="inline-flex items-center gap-2 bg-primary/5 px-5 py-2.5 rounded-md mb-4 border border-primary/10">
           <Icon name="Package" className="h-4 w-4 text-primary" />

@@ -53,7 +53,8 @@ const Contacts = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 relative">
+      <div className="absolute inset-0 bg-gradient-to-bl from-accent/10 via-primary/5 to-secondary/10 rounded-3xl -z-10"></div>
       <div className="text-center mb-16">
         <div className="inline-flex items-center gap-2 bg-secondary/10 px-4 py-2 rounded-full mb-4">
           <Icon name="MessageCircle" className="h-4 w-4 text-secondary" />

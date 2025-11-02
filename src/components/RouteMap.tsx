@@ -51,7 +51,8 @@ const RouteMap = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 relative">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/8 via-accent/8 to-secondary/8 rounded-3xl -z-10"></div>
       <div className="text-center mb-16">
         <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
           <Icon name="Map" className="h-4 w-4 text-primary" />

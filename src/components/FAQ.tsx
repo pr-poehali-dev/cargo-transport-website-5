@@ -32,7 +32,8 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 relative">
+      <div className="absolute inset-0 bg-gradient-to-tl from-secondary/10 via-transparent to-accent/10 rounded-3xl -z-10"></div>
       <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
         <div className="inline-flex items-center gap-2 bg-primary/5 px-5 py-2.5 rounded-md mb-4 border border-primary/10">
           <Icon name="HelpCircle" className="h-4 w-4 text-primary" />
