@@ -85,10 +85,10 @@ const Hero = () => {
           <div className="relative lg:block hidden animate-in fade-in slide-in-from-right-8 duration-1000 delay-500">
             <div className="grid grid-cols-1 gap-6">
               {[
-                { number: '15+', label: 'Лет опыта', icon: 'Award' },
                 { number: '500+', label: 'Единиц техники', icon: 'Truck' },
                 { number: '50+', label: 'Городов РФ', icon: 'MapPin' },
-                { number: '24/7', label: 'Поддержка', icon: 'Headphones' }
+                { number: '24/7', label: 'Поддержка', icon: 'Headphones' },
+                { number: '100%', label: 'Гарантия', icon: 'Award' }
               ].map((stat, index) => (
                 <div 
                   key={index} 
