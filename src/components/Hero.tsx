@@ -19,16 +19,16 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           <div className="text-left">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-primary">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-primary animate-in fade-in slide-in-from-bottom-6 duration-700">
               Надёжные грузоперевозки по России
             </h1>
 
-            <p className="text-xl md:text-2xl mb-8 text-gray-600 leading-relaxed max-w-xl font-extrabold">
+            <p className="text-xl md:text-2xl mb-8 text-gray-600 leading-relaxed max-w-xl font-extrabold animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
               Профессиональные логистические решения для вашего бизнеса. 
               Гарантируем сохранность грузов и соблюдение сроков доставки.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
               <Button 
                 size="lg" 
                 className="text-base px-10 py-7 shadow-md hover:shadow-lg transition-all"
