@@ -35,7 +35,7 @@ const Hero = () => {
               </Button>
               <Button size="lg" variant="outline" className="text-base px-10 py-7 border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all">
                 <Icon name="Phone" className="mr-2 h-5 w-5" />
-                +7 (495) 123-45-67
+                +7 (901) 037-09-63
               </Button>
             </div>
 
