@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -5,6 +6,23 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Icon from '@/components/ui/icon';
 
 const Contacts = () => {
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const whatsappMessage = `Новая заявка с сайта:%0A%0AИмя: ${name}%0AТелефон: ${phone}%0AEmail: ${email}%0AСообщение: ${message}`;
+    
+    window.open(`https://wa.me/79010370963?text=${whatsappMessage}`, '_blank');
+    
+    setName('');
+    setPhone('');
+    setEmail('');
+    setMessage('');
+  };
   const contactInfo = [
     {
       icon: 'Phone',
@@ -54,29 +72,53 @@ const Contacts = () => {
               <CardTitle className="text-2xl">Оставьте заявку</CardTitle>
               <CardDescription>Мы свяжемся с вами в ближайшее время</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div>
-                <Input placeholder="Ваше имя" className="h-12" />
-              </div>
-              <div>
-                <Input placeholder="Телефон" type="tel" className="h-12" />
-              </div>
-              <div>
-                <Input placeholder="Email" type="email" className="h-12" />
-              </div>
-              <div>
-                <Textarea 
-                  placeholder="Опишите ваш груз и задачу..." 
-                  className="min-h-32"
-                />
-              </div>
-              <Button className="w-full h-12 text-lg">
-                <Icon name="Send" className="mr-2 h-5 w-5" />
-                Отправить заявку
-              </Button>
-              <p className="text-xs text-muted-foreground text-center">
-                Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
-              </p>
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <Input 
+                    placeholder="Ваше имя" 
+                    className="h-12" 
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                </div>
+                <div>
+                  <Input 
+                    placeholder="Телефон" 
+                    type="tel" 
+                    className="h-12" 
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    required
+                  />
+                </div>
+                <div>
+                  <Input 
+                    placeholder="Email" 
+                    type="email" 
+                    className="h-12" 
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+                <div>
+                  <Textarea 
+                    placeholder="Опишите ваш груз и задачу..." 
+                    className="min-h-32"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
+                  />
+                </div>
+                <Button type="submit" className="w-full h-12 text-lg">
+                  <Icon name="Send" className="mr-2 h-5 w-5" />
+                  Отправить заявку
+                </Button>
+                <p className="text-xs text-muted-foreground text-center">
+                  Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+                </p>
+              </form>
             </CardContent>
           </Card>
         </div>
@@ -105,9 +147,11 @@ const Contacts = () => {
               <p className="mb-4 opacity-90">
                 Позвоните нам прямо сейчас, и наши специалисты помогут решить вашу задачу
               </p>
-              <Button variant="secondary" className="w-full" size="lg">
-                <Icon name="Phone" className="mr-2 h-5 w-5" />
-                Позвонить сейчас
+              <Button variant="secondary" className="w-full" size="lg" asChild>
+                <a href="tel:+79010370963">
+                  <Icon name="Phone" className="mr-2 h-5 w-5" />
+                  Позвонить сейчас
+                </a>
               </Button>
             </CardContent>
           </Card>
