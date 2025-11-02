@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import CallbackModal from '@/components/CallbackModal';
+import { useState, useEffect } from 'react';
 
 interface HeaderProps {
   activeSection: string;
@@ -8,6 +9,22 @@ interface HeaderProps {
 }
 
 const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.scrollY;
+      const scrollableHeight = documentHeight - windowHeight;
+      const progress = (scrollTop / scrollableHeight) * 100;
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -16,6 +33,10 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/98 backdrop-blur-sm border-b border-gray-200 shadow-sm">
+      <div 
+        className="absolute top-0 left-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent transition-all duration-300"
+        style={{ width: `${scrollProgress}%` }}
+      />
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3">
