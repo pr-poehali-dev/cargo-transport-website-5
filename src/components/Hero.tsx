@@ -3,11 +3,11 @@ import Icon from '@/components/ui/icon';
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-white">
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-white to-white" />
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-background">
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background" />
       
       <div 
-        className="absolute inset-0 opacity-[0.35]" 
+        className="absolute inset-0 opacity-[0.15]" 
         style={{
           backgroundImage: 'url(https://cdn.poehali.dev/files/756a1bfc-d221-4430-a160-c6e522fbc424.png)',
           backgroundSize: 'cover',
@@ -23,7 +23,7 @@ const Hero = () => {
               Надёжные грузоперевозки по России
             </h1>
 
-            <p className="text-xl md:text-2xl mb-8 text-gray-600 leading-relaxed max-w-xl font-extrabold animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
+            <p className="text-xl md:text-2xl mb-8 text-muted-foreground leading-relaxed max-w-xl font-extrabold animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
               Профессиональные логистические решения для вашего бизнеса. 
               Гарантируем сохранность грузов и соблюдение сроков доставки.
             </p>
@@ -76,7 +76,7 @@ const Hero = () => {
                   <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0 border-2 border-accent/30">
                     <Icon name={item.icon} className="h-5 w-5 text-accent" />
                   </div>
-                  <span className="text-sm text-gray-800 font-bold">{item.label}</span>
+                  <span className="text-sm text-foreground font-bold">{item.label}</span>
                 </div>
               ))}
             </div>
@@ -92,16 +92,16 @@ const Hero = () => {
               ].map((stat, index) => (
                 <div 
                   key={index} 
-                  className="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-200 hover:border-accent/40 transition-all animate-in fade-in slide-in-from-right-4 duration-700"
+                  className="bg-card rounded-2xl shadow-lg p-8 border-2 border-border hover:border-accent/60 transition-all animate-in fade-in slide-in-from-right-4 duration-700"
                   style={{ animationDelay: `${700 + index * 100}ms`, animationFillMode: 'both' }}
                 >
                   <div className="flex items-center gap-6">
-                    <div className="w-16 h-16 bg-primary/5 rounded-xl flex items-center justify-center flex-shrink-0 border border-primary/10">
-                      <Icon name={stat.icon} className="h-8 w-8 text-primary" />
+                    <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0 border border-accent/20">
+                      <Icon name={stat.icon} className="h-8 w-8 text-accent" />
                     </div>
                     <div>
-                      <div className="text-4xl font-bold text-primary mb-1">{stat.number}</div>
-                      <div className="text-sm text-gray-500 uppercase tracking-wide">{stat.label}</div>
+                      <div className="text-4xl font-bold text-accent mb-1">{stat.number}</div>
+                      <div className="text-sm text-muted-foreground uppercase tracking-wide">{stat.label}</div>
                     </div>
                   </div>
                 </div>
