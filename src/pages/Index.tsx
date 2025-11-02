@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import About from '@/components/About';
+import Portfolio from '@/components/Portfolio';
 import TrackCargo from '@/components/TrackCargo';
 import RouteMap from '@/components/RouteMap';
 import Contacts from '@/components/Contacts';
@@ -29,7 +30,11 @@ const Index = () => {
           <About />
         </section>
         
-        <section id="track" className="py-20 bg-muted/30">
+        <section id="portfolio" className="py-20 bg-muted/30">
+          <Portfolio />
+        </section>
+        
+        <section id="track" className="py-20">
           <TrackCargo />
         </section>
         
