@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import About from '@/components/About';
 import Portfolio from '@/components/Portfolio';
+import Testimonials from '@/components/Testimonials';
 import TrackCargo from '@/components/TrackCargo';
 import RouteMap from '@/components/RouteMap';
 import Contacts from '@/components/Contacts';
@@ -34,7 +35,11 @@ const Index = () => {
           <Portfolio />
         </section>
         
-        <section id="track" className="py-20">
+        <section id="testimonials" className="py-20">
+          <Testimonials />
+        </section>
+        
+        <section id="track" className="py-20 bg-muted/30">
           <TrackCargo />
         </section>
         
