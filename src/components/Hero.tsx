@@ -68,7 +68,11 @@ const Hero = () => {
                 { icon: 'Clock', label: 'Доставка точно в срок' },
                 { icon: 'FileCheck', label: 'Все документы' }
               ].map((item, index) => (
-                <div key={index} className="flex items-center gap-2">
+                <div 
+                  key={index} 
+                  className="flex items-center gap-2 animate-in fade-in slide-in-from-bottom-4 duration-700"
+                  style={{ animationDelay: `${index * 150}ms`, animationFillMode: 'both' }}
+                >
                   <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0 border-2 border-accent/30">
                     <Icon name={item.icon} className="h-5 w-5 text-accent" />
                   </div>
