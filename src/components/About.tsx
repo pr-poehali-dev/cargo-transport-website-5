@@ -6,7 +6,7 @@ const About = () => {
     {
       icon: 'Award',
       title: 'Опыт и надёжность',
-      description: 'Более 15 лет успешной работы на рынке транспортных услуг'
+      description: 'Многолетняя успешная работа на рынке транспортных услуг'
     },
     {
       icon: 'Users',
@@ -16,11 +16,11 @@ const About = () => {
     {
       icon: 'Settings',
       title: 'Современное оборудование',
-      description: 'Собственный автопарк из 500+ единиц техники последних моделей'
+      description: 'Собственный автопарк современной техники последних моделей'
     },
     {
       icon: 'Headphones',
-      title: 'Поддержка 24/7',
+      title: 'Поддержка',
       description: 'Круглосуточная служба клиентской поддержки и диспетчеризации'
     }
   ];
@@ -45,21 +45,10 @@ const About = () => {
           </p>
 
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-            За годы работы мы выстроили обширную сеть логистических маршрутов, охватывающую более 50 городов России 
-            и стран СНГ. Наша компания постоянно развивается, внедряя инновационные решения для оптимизации 
+            За годы работы мы выстроили обширную сеть логистических маршрутов по всей России 
+            и странам СНГ. Наша компания постоянно развивается, внедряя инновационные решения для оптимизации 
             транспортных процессов.
           </p>
-
-          <div className="flex flex-wrap gap-4">
-            <div className="bg-primary text-white px-8 py-4 rounded-lg shadow-md">
-              <div className="text-3xl font-bold">10,000+</div>
-              <div className="text-sm opacity-90 uppercase tracking-wide">довольных клиентов</div>
-            </div>
-            <div className="bg-accent text-white px-8 py-4 rounded-lg shadow-md">
-              <div className="text-3xl font-bold">99.8%</div>
-              <div className="text-sm opacity-90 uppercase tracking-wide">доставка в срок</div>
-            </div>
-          </div>
         </div>
 
         <div className="grid sm:grid-cols-2 gap-6">
