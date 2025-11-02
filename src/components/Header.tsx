@@ -21,7 +21,7 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
             <img 
               src="https://cdn.poehali.dev/files/756a1bfc-d221-4430-a160-c6e522fbc424.png" 
               alt="Карго Фьюжен" 
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
           </div>
 
