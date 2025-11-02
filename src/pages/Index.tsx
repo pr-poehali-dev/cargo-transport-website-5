@@ -11,6 +11,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import ScrollToTop from '@/components/ScrollToTop';
+import OnlineCounter from '@/components/OnlineCounter';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -56,6 +57,7 @@ const Index = () => {
       <Footer />
       <WhatsAppButton />
       <ScrollToTop />
+      <OnlineCounter />
     </div>
   );
 };
