@@ -14,7 +14,7 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/98 backdrop-blur-sm border-b border-gray-200 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3">
@@ -29,35 +29,35 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
             <Button 
               variant="ghost" 
               onClick={() => scrollToSection('home')}
-              className={activeSection === 'home' ? 'text-secondary' : ''}
+              className={`font-medium ${activeSection === 'home' ? 'text-accent' : 'text-gray-700'}`}
             >
               Главная
             </Button>
             <Button 
               variant="ghost" 
               onClick={() => scrollToSection('services')}
-              className={activeSection === 'services' ? 'text-secondary' : ''}
+              className={`font-medium ${activeSection === 'services' ? 'text-accent' : 'text-gray-700'}`}
             >
               Услуги
             </Button>
             <Button 
               variant="ghost" 
               onClick={() => scrollToSection('about')}
-              className={activeSection === 'about' ? 'text-secondary' : ''}
+              className={`font-medium ${activeSection === 'about' ? 'text-accent' : 'text-gray-700'}`}
             >
               О компании
             </Button>
             <Button 
               variant="ghost" 
               onClick={() => scrollToSection('track')}
-              className={activeSection === 'track' ? 'text-secondary' : ''}
+              className={`font-medium ${activeSection === 'track' ? 'text-accent' : 'text-gray-700'}`}
             >
               Отследить груз
             </Button>
             <Button 
               variant="ghost" 
               onClick={() => scrollToSection('contacts')}
-              className={activeSection === 'contacts' ? 'text-secondary' : ''}
+              className={`font-medium ${activeSection === 'contacts' ? 'text-accent' : 'text-gray-700'}`}
             >
               Контакты
             </Button>

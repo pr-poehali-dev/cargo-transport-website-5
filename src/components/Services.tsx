@@ -44,14 +44,14 @@ const Services = () => {
   return (
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
-        <div className="inline-flex items-center gap-2 bg-secondary/10 px-4 py-2 rounded-full mb-4">
-          <Icon name="Package" className="h-4 w-4 text-secondary" />
-          <span className="text-sm font-medium text-secondary">Наши услуги</span>
+        <div className="inline-flex items-center gap-2 bg-primary/5 px-5 py-2.5 rounded-md mb-4 border border-primary/10">
+          <Icon name="Package" className="h-4 w-4 text-primary" />
+          <span className="text-sm font-semibold text-primary tracking-wide uppercase">Наши услуги</span>
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
           Полный спектр логистических решений
         </h2>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           Предлагаем комплексный подход к транспортировке и хранению грузов любой сложности
         </p>
       </div>
@@ -60,20 +60,20 @@ const Services = () => {
         {services.map((service, index) => (
           <Card 
             key={index} 
-            className="border-2 hover:border-secondary transition-all duration-300 hover:shadow-xl group"
+            className="border-2 border-gray-200 hover:border-accent/40 transition-all duration-300 hover:shadow-lg group bg-white"
           >
             <CardHeader>
-              <div className="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:scale-110 transition-all duration-300">
-                <Icon name={service.icon} className="h-7 w-7 text-secondary group-hover:text-white" />
+              <div className="w-14 h-14 bg-primary/5 rounded-xl flex items-center justify-center mb-4 border border-primary/10">
+                <Icon name={service.icon} className="h-7 w-7 text-primary" />
               </div>
-              <CardTitle className="text-2xl">{service.title}</CardTitle>
-              <CardDescription className="text-base">{service.description}</CardDescription>
+              <CardTitle className="text-xl font-semibold text-primary">{service.title}</CardTitle>
+              <CardDescription className="text-base text-gray-600">{service.description}</CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="space-y-2">
                 {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Icon name="CheckCircle2" className="h-4 w-4 text-secondary flex-shrink-0" />
+                  <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                    <Icon name="Check" className="h-4 w-4 text-accent flex-shrink-0" />
                     <span>{feature}</span>
                   </li>
                 ))}
