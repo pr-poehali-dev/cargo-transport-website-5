@@ -83,7 +83,7 @@ const Footer = () => {
           <img 
             src="https://cdn.poehali.dev/files/756a1bfc-d221-4430-a160-c6e522fbc424.png" 
             alt="Карго Фьюжен" 
-            className="h-16 w-auto brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+            className="h-20 w-auto hover:scale-105 transition-transform"
           />
         </div>
       </div>
