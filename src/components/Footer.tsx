@@ -9,7 +9,7 @@ const Footer = () => {
             <img 
               src="https://cdn.poehali.dev/files/756a1bfc-d221-4430-a160-c6e522fbc424.png" 
               alt="Карго Фьюжен" 
-              className="h-12 w-auto mb-4 brightness-0 invert"
+              className="h-16 w-auto mb-4"
             />
             <p className="text-sm text-white/70">
               Надёжные грузоперевозки по России и СНГ с 2010 года
@@ -79,13 +79,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 mt-8 flex justify-center">
-          <img 
-            src="https://cdn.poehali.dev/files/756a1bfc-d221-4430-a160-c6e522fbc424.png" 
-            alt="Карго Фьюжен" 
-            className="h-20 w-auto hover:scale-105 transition-transform"
-          />
-        </div>
+
       </div>
     </footer>
   );
